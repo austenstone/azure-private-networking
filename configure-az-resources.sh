@@ -14,14 +14,14 @@
 set -e
 
 #set environment
-export AZURE_LOCATION=YOUR_AZURE_LOCATION
-export SUBSCRIPTION_ID=YOUR_SUBSCRIPTION_ID
-export RESOURCE_GROUP_NAME=YOUR_RESOURCE_GROUP_NAME
-export VNET_NAME=YOUR_VNET_NAME
-export SUBNET_NAME=YOUR_SUBNET_NAME
-export NSG_NAME=YOUR_NSG_NAME
-export NETWORK_SETTINGS_RESOURCE_NAME=YOUR_NETWORK_SETTINGS_RESOURCE_NAME
-export DATABASE_ID=YOUR_DATABASE_ID
+export AZURE_LOCATION=eastus # az account list-locations -o table 
+export SUBSCRIPTION_ID=2d63aa20-c132-4d37-b9ac-d1852d10ba55 # az account list -o table
+export RESOURCE_GROUP_NAME=github # az group list -o table
+export VNET_NAME=github-vnet # az network vnet list -o table
+export SUBNET_NAME=github-subnet
+export NSG_NAME=github-network-security-group
+export NETWORK_SETTINGS_RESOURCE_NAME=github-network-settings
+export DATABASE_ID=118 # ./get-enterprise-databaseid.sh
 
 # These are the default values. You can adjust your address and subnet prefixes.
 export ADDRESS_PREFIX=10.0.0.0/16
